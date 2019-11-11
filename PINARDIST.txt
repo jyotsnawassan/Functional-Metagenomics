@@ -1,0 +1,4 @@
+library(ape)
+library(vegan)
+phy <- read.tree("sample.tre")
+pd <- cophenetic(phy)
