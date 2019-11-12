@@ -1,0 +1,20 @@
+Files in directories contrib are released under publications copyright & license 
+
+Implemented under following Publications and To be cited with Reference to Them.
+
+Copyright (c) Wassan, J.T., Wang, H., Browne, F. and Zheng, H., 2019. 
+Phy-PMRFI: Phylogeny-aware Prediction of Metagenomic Functions using Random Forest Feature Importance. 
+IEEE transactions on nanobioscience.
+Copyright (c) Wassan, J.T., Wang, H., Browne, F. and Zheng, H., 2018, December. PAAM-ML: A novel Phylogeny and Abundance aware Machine
+Learning Modelling Approach for Microbiome Classification. 
+
+Contact: wassan-jt@ulster.ac.uk
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
