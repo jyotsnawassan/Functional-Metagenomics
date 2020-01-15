@@ -1,4 +1,5 @@
 # Functional-Metagenomics
+Space includes developed techniques to incorporate phylogeny with microbial abundances in the field of functional metagenomics (where functions of microbial genes are linked to their structure)
 
 1. Phylogeny in Data Preprocessing and Engineering
 An algorithmic procedure is proposed to create a novel data structure of Phylogeny and Abundance-aware Matrix (PAAM)
