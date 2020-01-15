@@ -1,0 +1,115 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"
+<!--fbf2ad  d5ae83-->
+
+<html>
+<head>
+<link rel="StyleSheet" type="text/css" href="styles.css">
+</head>
+<body bgcolor= '99FF99' link="238574" alink="238574" vlink="238574">
+<table cellpadding="0" border="0" cellspacing="0.0" align='center'>
+    <tr>
+    <td bgcolor= '0099FF' height = 80px width = 1150px valign =top >
+        <br><br>
+        <div style="line-height:00%" >
+        <H4 style="color: 99FFFF; font-size:23pt;">
+        <BLOCKQUOTE><BLOCKQUOTE><BLOCKQUOTE>
+         PAAM-GENERATION
+        </BLOCKQUOTE> </BLOCKQUOTE> </BLOCKQUOTE>
+        </H4>
+        
+        
+        </div>
+        <br><br>
+        
+    </td>
+    </tr>
+
+      
+  <tr>
+    
+    <td bgcolor= 'FFFFCC' width= 842px valign = top>
+       <BLOCKQUOTE><BLOCKQUOTE><BLOCKQUOTE>
+        
+        
+        <a name="intro"> <H3 style="color: #238574"> Introduction </H3> </a>      
+        <P>
+                 
+            Machine learning (ML) over Phylogeny and Abundnace -aware matrix (PAAM) termed as PAAM-ML, is a supervised ML method for classifying metagenomic samples into 
+            Phenotype taking advantage of the evolutionary structure of microbial community as driven by phylogenetic trees along with quantitative abundances.PAAM is constructed 
+            with Perl based Scripting, which could be further used in ML.This page link guides the construction of a novel data structure of PAAM.
+            
+        </P> 
+
+        <a name="down"> <H3 style="color: #238574"> Downloads </H3> </a>      
+
+               
+        <P>
+           The Perl source code is available <a href="https://github.com/jyotsnawassan/Functional-Metagenomics/blob/master/PAAM_gen.pl"> <b> here</b></a>.
+           Dependency : PERL Tk Module for GUI.        
+        </P>
+        
+
+
+        <a name="instr"> <H3 style="color: #238574"> Instructions </H3> </a>      
+        <P> Run with command on Commnd Prompt </P>
+        <P>
+         >>perl PAAM_gen.pl 
+        </p>
+        <p>
+         It provides a GUI to input : (i) Taxa/OTU Abundance Count Table and (ii) Phylogenetic Tree connecting taxa
+         & Generate PAAM from these two Inputs</P>
+
+<b> Input data files Needed and formats </b>
+<p>
+
+  <ul>
+        <li>OTU count data table</li>
+        <li>Phylogenetic tree</li>
+      
+  </ul> 
+
+<p> <b><i>OTU count data</i> </b>
+Data .csv file that has OTU count information for each sample and phenotypic information in the last Column.
+It serves as table where rows denote the metagenomic samples and columns denote the Taxa/OTUs
+<p> An input sample file is found
+<a href="https://github.com/jyotsnawassan/Functional-Metagenomics/blob/master/THOTU.csv".   
+<b> here</b></a>
+</p>
+</p>         
+
+
+
+<p> <b><i>Phylogenetic tree</i> </b> </p><p>
+
+Data file that contains the phylogenetic tree for the Taxa in a Newick format.
+<p> A tree related to the sample OTU table is available at 
+<a href="https://github.com/jyotsnawassan/Functional-Metagenomics/blob/master/throat.tre"
+<b> here</b></a>
+<p>
+It needs to be preprocessed with following Shell command in Linux before is it inputted to 
+the application of Perl for generating PAAM.</p>
+
+>> throat.tre |sed "s/(/(\n/g" |sed "s/)/\n)/g" |sed "s/,(/,\n(/g" > T3.tre
+
+<p> A preprocessed tree is shown at
+<a href="https://github.com/jyotsnawassan/Functional-Metagenomics/blob/master/T3.tre"
+<b> here</b></a>
+<P>
+Use preprocessed tree (e.g. "T3.tre") and OTU Count Table ("THOTU.csv") in the Perl Script as shown  
+<a href="https://github.com/jyotsnawassan/Functional-Metagenomics/blob/master/sample.jpg"
+<b> here</b></a>
+<p> Give path for output file to be generated../../PAAM.csv</p>
+
+<p> <b> Output Data File </b>
+<p>Click Generate Button to create PAAM.csv.
+</P>
+<p>
+A sample PAAM generated is available here.
+<a href="https://github.com/jyotsnawassan/Functional-Metagenomics/blob/master/throatpaam.csv"
+<b> here</b></a>
+</P>
+
+</body>
+</html>
