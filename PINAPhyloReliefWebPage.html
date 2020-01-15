@@ -1,0 +1,96 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"
+<!--fbf2ad  d5ae83-->
+
+<html>
+<head>
+<link rel="StyleSheet" type="text/css" href="styles.css">
+</head>
+<body bgcolor= '99FF99' link="238574" alink="238574" vlink="238574">
+<table cellpadding="0" border="0" cellspacing="0.0" align='center'>
+    <tr>
+    <td bgcolor= '0099FF' height = 80px width = 1150px valign =top >
+        <br><br>
+        <div style="line-height:00%" >
+        <H4 style="color: 99FFFF; font-size:23pt;">
+        <BLOCKQUOTE><BLOCKQUOTE><BLOCKQUOTE>
+         PINA-PhyoRelief
+        </BLOCKQUOTE> </BLOCKQUOTE> </BLOCKQUOTE>
+        </H4>
+        </div>
+        <br><br>
+    </td>
+    </tr>
+     
+  <tr>
+<td bgcolor= 'FFFFCC' width= 842px valign = top>
+       <BLOCKQUOTE><BLOCKQUOTE><BLOCKQUOTE>
+        <a name="intro"> <H3 style="color: #238574"> Introduction </H3> </a>      
+        <P>
+         PINA is a recently developed phylogenetic index to find the phylogenetic similarity between microbiome samples 
+         instead of the UniFrac ranking of features representing internal nodes in phylogenetic tree topology.</P>
+        <p>
+        <img src="https://github.com/jyotsnawassan/Functional-Metagenomics/blob/master/eqpina.jpg" alt="PINA Formula"> </p>
+        </img>
+        <P>
+	where Φij represents cophenetic distance matrix or co-occurrence association matrix; t
+	he entries in the matrix are the sum of the length of the branches separating each pair of microbial species.
+	Thus, if two species are far apart on the phylogeny, their distance will be larger than that for two closely related species.; 
+	A and B represent microbial samples with nA and nB microbial species that have been sampled </P>
+        <a name="down"> <H3 style="color: #238574"> Downloads </H3> </a>      
+        <P>
+              PINA is used to caluclate weighs of features which are helpful in ranking by Relief Measure Strategy
+              The Perl source code is available
+              <a href="https://github.com/jyotsnawassan/Functional-Metagenomics/blob/master/PINA_phyllr.pl"
+              <b> here</b></a>
+        </P>
+        <a name="instr"> <H3 style="color: #238574"> Instructions </H3> </a>      
+        <P> Run with command on Commnd Prompt </P>
+        <P>
+         perl script name -OTUS_csv <OTU PINA based relation csv file>  -ABUNDANCE_csv  <ABUNDANCE csv file> -phylogeny <phylogeny file> -filter < 0.0 - 1.0 >  -OUT_W <output weightedcsv file> -LOG <output log file>
+        </p>
+        <p>
+        
+<b> Input data files Needed and formats </b>
+<p>
+<ul>
+        <li>OTU PINA based relation File</li>
+        <li>OTU count data table</li>
+        <li>Phylogenetic tree</li>
+        <li>Filter</li>
+</ul> 
+
+<p> <b><i> Pina based relation needs co-occurrence Matrix as Input </i> </b>
+Co-occurrence is calculated via R Scipt using ape package in R
+<p> Sample R Script is found
+<a href="https://github.com/jyotsnawassan/Functional-Metagenomics/blob/master/PINARDIST.txt".   
+<b> here</b></a> </p>
+
+
+<p> <b><i>OTU count data</i> </b>
+Data .csv file that has OTU count information for each sample and phenotypic information in the last Column.
+It serves as table where rows denote the metagenomic samples and columns denote the Taxa/OTUs
+</p>
+
+
+
+<p> <b><i>Phylogenetic tree</i> </b> 
+Data file that contains the phylogenetic tree for the Taxa in a Newick format.
+</p>
+<p>
+It needs to be preprocessed with following Shell command in Linux before is it inputted to 
+the application of PINA PhyloRelief .</p>
+<p>
+>> sample.tre |sed "s/(/(\n/g" |sed "s/)/\n)/g" |sed "s/,(/,\n(/g" > T3.tre
+</p>
+
+<p> <b><i>filter</i> </b> 
+Used to filter ancestral nodes (e.g. 0.50 as filter indicates 50 % of teh ancestral nodes are to selected)
+</p>
+<p> <b><i>OUT_W</i> </b> 
+Generates Output
+</p>
+
+</body>
+</html>
