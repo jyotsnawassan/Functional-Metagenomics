@@ -1,5 +1,5 @@
 # Functional-Metagenomics
-# Script available as PAAMWebpage.html
+# Functionality available as PAAMWebpage.html
 
 An algorithmic procedure is proposed to create a novel data structure of Phylogeny and Abundance-aware Matrix (PAAM)
 exploiting the phylogenetic ancestral, and; integrating taxonomical evolution of microorganisms 
